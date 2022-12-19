@@ -1,8 +1,12 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>Cosmetic Store</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/store.css">
     <link rel="stylesheet" href="../css/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
@@ -14,8 +18,7 @@
 
 <body>
     <nav>
-        <div class="logo">
-        </div>
+        <div class="logo"></div>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -25,12 +28,18 @@
             </ul>
         </nav>
     </nav>
-    <section>
-    </section>
-    <footer>
-        Copyright 2022 Cosmetic Store
-    </footer>
 
+    <div class="card-container" id="storeContainer">
+
+        <div hidden id="spinner"></div>
+
+    </div>
+    <script src="../js/getData.js"></script>
+    <script>
+        window.addEventListener("load", (event) => {
+            getAllProducts();
+        });
+    </script>
 </body>
 
 </html>
