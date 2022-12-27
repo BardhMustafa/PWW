@@ -7,3 +7,6 @@ function setDataInLS(path, value) {
 function getDataFromLS(path) {
     return window.localStorage.getItem(KEY + path)
 }
+function removeFromLS(path) {
+    window.localStorage.removeItem(KEY + path)
+}
