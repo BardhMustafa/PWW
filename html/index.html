@@ -4,6 +4,7 @@
 <head>
     <title>Cosmetic Store</title>
     <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/store.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
     </style>
@@ -27,15 +28,23 @@
             </ul>
         </nav>
     </nav>
-    <section>
-    </section>
+    <div class="card-container" id="storeContainer">
+
+        <div hidden id="spinner"></div>
+
+    </div>
     <footer>
         Copyright 2022 Cosmetic Store
     </footer>
 
     <script src="../js/setLocalStorage.js"></script>
     <script src="../js/auth.js"></script>
-
+    <script src="../js/getData.js"></script>
+    <script>
+        window.addEventListener("load", (event) => {
+            getMostSellers()
+        });
+    </script>
 </body>
 
 </html>

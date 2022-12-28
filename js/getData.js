@@ -13,6 +13,23 @@ function getAllProducts() {
         });
 }
 
+function getMostSellers() {
+    const spinner = document.getElementById("spinner");
+    spinner.removeAttribute('hidden');
+
+    fetch('https://dummyjson.com/products/category/fragrances?limit=3')
+        .then(res => res.json())
+        .then(data => {
+            spinner.setAttribute('hidden', '');
+            showProducts(data)
+        })
+        .catch(error => {
+            spinner.setAttribute('hidden', '');
+            showError()
+        });
+}
+
+
 function showProducts(data) {
     console.log(data.products)
     let container = document.getElementById("storeContainer");
