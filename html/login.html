@@ -81,7 +81,9 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Store</a></li>
                 <li><a href="#">About Us</a></li>
-                <li><a href="#">User</a></li>
+                <li><a href="#" id="user">User</a></li>
+                <a id="loginLink" href="#" style="display: none;">Login</a>
+                <a id="logoutLink" href="#" style="display: none;">Logout</a>
             </ul>
         </nav>
     </nav>
@@ -98,6 +100,7 @@
     <script src="../js/setLocalStorage.js"></script>
     <script>
         function onSubmit() {
+            console.log("aa")
             let username = document.getElementById("username").value;
             let password = document.getElementById("password").value;
             let data = {

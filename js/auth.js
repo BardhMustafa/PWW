@@ -15,8 +15,9 @@ function login(data) {
             console
             setDataInLS("token", data.token)
             setDataInLS("name", data.firstName)
-        })
-
+        }
+        ).catch(err => console.log(err)
+        )
 }
 function isUserLogged() {
     editNav(checkIfUser())
