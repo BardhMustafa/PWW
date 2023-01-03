@@ -1,17 +1,160 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="shortcut icon" href="/assets/favicon.ico">
+    <link rel="stylesheet" href="/assets/dcode.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
+    </style>
+    <link rel="stylesheet" href="../css/main.css">
+
+    <title>About us</title>
 </head>
+
+<style>
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: "poppins", sans-serif;
+        background-color: #f5f5f5;
+    }
+
+    .Tabela {
+        border-collapse: collapse;
+
+
+        min-width: 400px;
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .Tabela thead td {
+        background-color: rgb(22, 18, 63);
+        color: #ffffff;
+        text-align: left;
+        font-weight: bold;
+
+
+    }
+
+    .Tabela th .Tabela td {
+
+        padding: 20px 20px;
+
+    }
+
+    .Tabela tbody tr {
+        border-bottom: 1px solid #d5a2cf;
+
+    }
+
+    .Tabela tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+
+    }
+
+    .Tabela tbody tr:last-of-type {
+        border-bottom: 2px solid #ffffff;
+
+    }
+</style>
 
 <body>
 
+    <nav>
+        <div class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Store</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#" id="user">User</a></li>
+                <a id="loginLink" href="#" style="display: none;">Login</a>
+                <a id="logoutLink" href="#" style="display: none;">Logout</a>
+            </ul>
+        </nav>
+    </nav>
+    <section>
+
+        <table class="Tabela">
+            <thead>
+                <tr>
+                    <td></td>
+                    <td>Balkan</td>
+                    <td>Europe</td>
+                    <td>Azia</td>
+                    <td>America</td>
+                    <td>Africa</td>
+
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Good Costumer service</td>
+                <td>87%</td>
+                <td>76%</td>
+                <td>89%</td>
+                <td>80%</td>
+                <td>91%</td>
+
+            </tr>
+
+            <thead>
+                <tr>
+                    <td>Products returned</td>
+                    <td>5%</td>
+                    <td>4%</td>
+                    <td>14%</td>
+                    <td>19%</td>
+                    <td>20%</td>
+
+                </tr>
+            </thead>
+
+            <tr>
+                <td>Physical form-good condition</td>
+                <td>100%</td>
+                <td>100%</td>
+                <td>87%(transport damaging)</td>
+                <td>85%(transport damaging)</td>
+                <td>72%(transport damaging)</td>
+
+            </tr>
+            <thead>
+                <tr>
+                    <td>Gender</td>
+                    <td>Mostly Women</td>
+                    <td>Mostly Women</td>
+                    <td>Mostly Women</td>
+                    <td>Mostly Men</td>
+                    <td>Mostly Men</td>
+
+                </tr>
+            </thead>
+            <tr>
+                <td>Bad reviews</td>
+                <td>0%</td>
+                <td>0%</td>
+                <td>12%</td>
+                <td>15%</td>
+                <td>19%</td>
+
+            </tr>
 
 
+
+
+
+        </table>
+    </section>
 </body>
 
 </html>
