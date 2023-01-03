@@ -40,9 +40,10 @@ function showProducts(data) {
         <img src=${product.thumbnail} alt="Product image">
         <h3>${product.title}</h3>
             <p>${product.description}</p>
-            <p>${product.price} $<p>
-            <p>${product.category} $</p>
-            <p>Stock: ${product.stock}</p>
+            <p style="font-size: 1em;
+            font-weight: bold;
+            color: #009900;">${product.price} $<p>
+            <p style="border:2px solid #16123f; padding:4px;border-radius:10px">${product.category} </p>
         </div>
         `
     })
