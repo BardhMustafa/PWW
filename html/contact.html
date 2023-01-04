@@ -16,6 +16,57 @@
 <body>
 
     <style>
+        .login-form {
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .login-form h1 {
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background-color: rgb(22, 18, 63);
+            color: #fff;
+            font-size: 24px;
+            border-radius: 5px 5px 0 0;
+        }
+
+        .login-form .form-control {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .login-form .form-control:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #c7ddcc;
+        }
+
+        .login-form .btn {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #16123f;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .login-form .btn:hover {
+            background-color: rgba(22, 18, 63, 0.8);
+        }
+
         table {
             border-collapse: collapse;
             width: 100%;
@@ -52,6 +103,26 @@
             </ul>
         </nav>
     </nav>
+    <section style="display: flex; justify-content: center;align-items: center; background-color: #f5f5f5;">
+        <div style="width: 900px; display: flex; flex-direction: row; justify-content: space-between; padding: 15px;">
+            <p>
+                If you have any questions, you can contact us <at><br></at> <a href="mailto:support@onlinestore.com"
+                    target="_blank">support@onlinestore.com</a>.
+            </p>
+
+            <p>
+                Our address is:<br>
+                Online Store<br>
+                George Bush<br>
+                Prishtine, Kosove 10000
+            </p>
+
+            <p>
+                Our store ID is:<br>
+                <a href="www.gjirafa50.com" target="_blank">ABC123</a>
+            </p>
+        </div>
+    </section>
 
     <div style="display: flex; justify-content: center;flex-direction: column; align-items: center; margin: 20px auto;">
         <table style="max-width: 800px;">
@@ -68,7 +139,7 @@
                     <address>Muharrem Fejza</address>
                 </td>
                 <td>Prishtine</td>
-                <td><abbr title="Kosova">KS</abbr></td>
+                <td>KS</td>
                 <td>10000</td>
             </tr>
             <tr>
@@ -77,7 +148,7 @@
                     <address>Mehmet Akif Ersoy</address>
                 </td>
                 <td>Gjilan</td>
-                <td><abbr title="Kosova">KS</abbr></td>
+                <td>KS</td>
                 <td>60000</td>
             </tr>
             <tr>
@@ -86,7 +157,7 @@
                     <address>Metush Krasniqi</address>
                 </td>
                 <td>Prishtine</td>
-                <td><abbr title="Kosova">KS</abbr></td>
+                <td>KS</td>
                 <td>10000</td>
             </tr>
             <tr>
@@ -95,29 +166,43 @@
                     <address>Abdullah Tahiri</address>
                 </td>
                 <td>Prizren</td>
-                <td><abbr title="Kosova">KS</abbr></td>
+                <td>KS</td>
                 <td>20000</td>
             </tr>
         </table>
         <div>
 
-            <p id="location" name="location"></p><br><br>
-            <button onclick="getLocation()">Get ur Location</button>
+            <p id="location" style="text-shadow:#c7ddcc ;" name="location"></p><br><br>
+            <button style="border: 2px solid #16123f; background-color: white; padding: 10px; border-radius: 6px;"
+                onclick="getLocation()">Get ur
+                Location</button>
         </div>
     </div>
     <div class="centerDiv" style="background-color: #f2f2f2; padding: 10px;">
 
-        <form method=" post" enctype="text/plain">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name"><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
-            <label for="location">Location:</label><br>
-            <input type="submit" value="Send">
+        <form action="mailto:info@example.com" method="get" enctype="text/plain" class="login-form">
+            <input type="text" class="form-control" placeholder="Email" required id="email">
+            <textarea type="text" class="form-control" placeholder="Ask for help" required id="suggestions">
+                </textarea>
+            <button class="btn"> Contact Us</button>
         </form>
+
     </div>
+    <footer>
+        <div>
+
+            <ul>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/store.html">Store</a></li>
+                <li><a href="/html/dashboard.html">Dashboard</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+                <li><a href="/html/aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <span>
+            Copyright 2022 Cosmetic Store
+        </span>
+    </footer>
     <button onclick="getLocation()">Get ur Location</button>
     <script>
 
