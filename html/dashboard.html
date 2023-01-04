@@ -31,39 +31,45 @@
         </nav>
     </nav>
     </nav>
-    <section id="data" style="display: flex; justify-content: center; align-items: center;">
-        <table>
-            <tr>
-                <th colspan="2"> Add new product in list</th>
-            </tr>
-            <tr>
-                <td>
-                    Product:
-                </td>
-                <td><input type="text" name="product" required></td>
-            </tr>
-            <tr>
-                <td>Price:</td>
-                <td><input type="number" id="price" min="0" step="0.01" onchange="changeprice()" name="price" required>
-                </td>
-            </tr>
-            <tr>
-                <td>Quantity:</td>
-                <td><input type="number" id="quantity" min="1" name="quantity" onchange="changeprice()" required></td>
-            </tr>
+    <center>
 
-            <tr>
-                <td>Total:</td>
-                <td><span id="total">$0.00</span></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button type="submit"
-                        style="padding:10px; background: linear-gradient(145deg, #16123f,#c7ddcc) ; color: white;">Add</button>
-                </td>
-            </tr>
-        </table>
-    </section>
+        <section id="data"
+            style=" transform: translate(0,50%);display: flex; max-width: 600px; justify-content: center; align-items: center; background-color: #c7ddcc;">
+            <table>
+                <tr>
+                    <th colspan="2"> Add new product in list</th>
+                </tr>
+                <tr>
+                    <td>
+                        Product:
+                    </td>
+                    <td><input type="text" name="product" required></td>
+                </tr>
+                <tr>
+                    <td>Price:</td>
+                    <td><input type="number" id="price" min="0" step="0.01" onchange="changeprice()" name="price"
+                            required>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Quantity:</td>
+                    <td><input type="number" id="quantity" min="1" name="quantity" onchange="changeprice()" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Total:</td>
+                    <td><span id="total">$0.00</span></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit"
+                            style="padding:15px; background: linear-gradient(145deg, #16123f,white) ; color: white; border-radius: 10px;">Add</button>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </center>
     <style>
         input {
             padding: 5px 10px;
@@ -79,7 +85,7 @@
             if (checkIfUser()) {
                 document.getElementById("data").style.display = "block"
             } else {
-                // window.location.replace("/html/index.html")
+                window.location.replace("/html/index.html")
             }
         }
         function changeprice() {
