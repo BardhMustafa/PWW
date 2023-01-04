@@ -7,6 +7,12 @@ body {
   font-family: 'Poppins', sans-serif;
   /* background-color: #F0F0F0; */
 
+
+}
+
+@font-face {
+  font-family: 'MyWebFont';
+  src: url('../assets/video/Montserrat/static/Montserrat-Light.ttf') format('ttf'),
 }
 
 .centerDiv {
@@ -99,6 +105,7 @@ nav a:hover {
 
 /* Add some hover effects */
 footer {
+  font-family: MyWebFont;
   background-color: #16123f;
 }
 
