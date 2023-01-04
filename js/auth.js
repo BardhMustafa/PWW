@@ -34,10 +34,12 @@ function editNav(data) {
     if (data) {
         document.getElementById("loginLink").style.display = "none";
         document.getElementById("logoutLink").style.display = "block";
+        document.getElementById("user").style.display = "block"
         document.getElementById("user").innerHTML = getDataFromLS("name")
         document.getElementById("logoutLink").addEventListener("click", logout)
     } else {
         document.getElementById("loginLink").style.display = "block";
+        document.getElementById("user").style.display = "none"
         document.getElementById("logoutLink").style.display = "none";
 
     }

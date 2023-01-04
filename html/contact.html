@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Cosmetic Store</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/store.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&family=Poppins:wght@400;500;600;700&display=swap');
+    </style>
+</head>
+
+<body>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2
+        }
+
+        th {
+            background-color: #16123f;
+            color: white;
+        }
+    </style>
+    <nav>
+        <div class="logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/store.html">Store</a></li>
+                <li><a href="/html/dashboard.html">Dashboard</a></li>
+                <li><a href="/html/store.html">About Us</a></li>
+                <li><a href="/html/contact.html">Contact </a></li>
+                <li style="display: none;" id="username"><a href="#" id="user">User</a></li>
+                <a id="loginLink" href="#" style="display: none;">Login</a>
+                <a id="logoutLink" href="#" style="display: none;">Logout</a>
+            </ul>
+        </nav>
+    </nav>
+
+    <div style="display: flex; justify-content: center;flex-direction: column; align-items: center; margin: 20px auto;">
+        <table style="max-width: 800px;">
+            <tr>
+                <th>Pika</th>
+                <th>Adresa</th>
+                <th>City</th>
+                <th>Shteti</th>
+                <th>Zip Code</th>
+            </tr>
+            <tr>
+                <td>Pika 1</td>
+                <td>
+                    <address>Muharrem Fejza</address>
+                </td>
+                <td>Prishtine</td>
+                <td>KS</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Pika 2</td>
+                <td>
+                    <address>Mehmet Akif Ersoy</address>
+                </td>
+                <td>Gjilan</td>
+                <td>KS</td>
+                <td>60000</td>
+            </tr>
+            <tr>
+                <td>Pika 3</td>
+                <td>
+                    <address>Metush Krasniqi</address>
+                </td>
+                <td>Prishtine</td>
+                <td>KS</td>
+                <td>10000</td>
+            </tr>
+            <tr>
+                <td>Pika 4</td>
+                <td>
+                    <address>Abdullah Tahiri</address>
+                </td>
+                <td>Prizren</td>
+                <td>KS</td>
+                <td>20000</td>
+            </tr>
+        </table>
+        <div>
+
+            <p id="location" name="location"></p><br><br>
+            <button onclick="getLocation()">Get ur Location</button>
+        </div>
+    </div>
+    <div class="centerDiv" style="background-color: #f2f2f2; padding: 10px;">
+
+        <form method=" post" enctype="text/plain">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="30"></textarea><br><br>
+            <label for="location">Location:</label><br>
+            <input type="submit" value="Send">
+        </form>
+    </div>
+    <button onclick="getLocation()">Get ur Location</button>
+    <script>
+
+        var x = document.getElementById("location");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.watchPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+        function showPosition(position) {
+            x.innerHTML = "Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+    <style>
+        form {
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        form input {
+            display: block;
+            width: 80%;
+            margin: 20px auto;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        form input:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px #c7ddcc;
+        }
+    </style>
+</body>
+
+</html>

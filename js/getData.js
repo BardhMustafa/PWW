@@ -52,3 +52,12 @@ function showError() {
     let container = document.getElementById("storeContainer");
     container.innerHTML = `<h1 class="errorTExt">Error 404! No data found</h1>`
 }
+const showCategories = async () => {
+    try {
+        const response = await fetch("https://dummyjson.com/products/categories")
+        console.log(response.json())
+    } catch (error) {
+        throw new Error("failed to fetch categories");
+
+    }
+}

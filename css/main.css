@@ -9,6 +9,12 @@ body {
 
 }
 
+.centerDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 header {
   background-color: #333;
   color: white;
@@ -90,6 +96,39 @@ nav a:hover {
   will-change: transform;
   animation: spin 1s infinite linear
 }
+
+/* Add some hover effects */
+footer {
+  background-color: #16123f;
+}
+
+footer a {
+  color: #c7ddcc;
+  font-size: medium;
+  text-decoration: dotted;
+}
+
+/* Use a responsive layout */
+footer ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer li {
+  margin-bottom: 10px;
+}
+
+
+/* Use icons */
+footer li::before {
+  /* using Font Awesome icon */
+  font-weight: 900;
+  margin-right: 10px;
+}
+
+
 
 @keyframes spin {
   from {
