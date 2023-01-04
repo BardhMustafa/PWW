@@ -91,6 +91,15 @@
                 movedown()
             }
         });
+        var currentTime = new Date().getHours();
+        if (document.body) {
+            if (7 <= currentTime && currentTime < 20) {
+                document.getElementsByTagName('body')[0].style.backgroundColor = "white"
+            }
+            else {
+                document.getElementsByTagName('body')[0].style.backgroundColor = "dark"
+            }
+        }
     </script>
     <center>
 
