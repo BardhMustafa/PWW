@@ -19,10 +19,12 @@
         </div>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Store</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#" id="user">User</a></li>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/store.html">Store</a></li>
+                <li><a href="/html/dashboard.html">Dashboard</a></li>
+                <li><a href="/html/store.html">About Us</a></li>
+                <li><a href="/html/contact.html">Contact </a></li>
+                <li style="display: none;" id="username"><a href="#" id="user">User</a></li>
                 <a id="loginLink" href="#" style="display: none;">Login</a>
                 <a id="logoutLink" href="#" style="display: none;">Logout</a>
             </ul>
@@ -54,14 +56,34 @@
                 Sellers</button>
         </div>
     </div>
+    <div id="categories" style="display: flex;justify-content: center; align-items: center;">
+
+        <button id="button1">Show Best Sellers</button>
+        <button id="button2">Hide Best Sellers</button><br><br>
+    </div>
 
     <div class="card-container" id="storeContainer">
 
         <div hidden id="spinner"></div>
 
     </div>
+    <section>
+
+    </section>
     <footer>
-        Copyright 2022 Cosmetic Store
+        <div>
+
+            <ul>
+                <li><a href="/html/index.html">Home</a></li>
+                <li><a href="/html/store.html">Store</a></li>
+                <li><a href="/html/dashboard.html">Dashboard</a></li>
+                <li><a href="/html/contact.html">Contact</a></li>
+                <li><a href="/html/aboutus.html">About Us</a></li>
+            </ul>
+        </div>
+        <span>
+            Copyright 2022 Cosmetic Store
+        </span>
     </footer>
 
     <script src="../js/setLocalStorage.js"></script>
@@ -72,6 +94,29 @@
             getMostSellers()
         });
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $("#storeContainer").fadeIn();
+            });
+            $("#button2").click(function () {
+                $("#storeContainer").fadeOut();
+            });
+
+        });
+    </script>
+    <style>
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            background-color: #16123f;
+            color: white;
+            font-weight: bold;
+            border-radius: 10px;
+            border: none;
+        }
+    </style>
 </body>
 
 </html>
