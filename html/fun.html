@@ -1,0 +1,113 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        canvas {
+            transform: translate(50%);
+            border: 1px solid #d3d3d3;
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+
+<body onload="startGame()">
+    <script>
+
+        var myGamePiece;
+
+        function startGame() {
+            myGamePiece = new component(30, 30, "#16123f", 10, 120);
+            myGameArea.start();
+        }
+
+        var myGameArea = {
+            canvas: document.createElement("canvas"),
+            start: function () {
+                this.canvas.width = 480;
+                this.canvas.height = 270;
+                this.context = this.canvas.getContext("2d");
+                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
+                this.interval = setInterval(updateGameArea, 20);
+            },
+            clear: function () {
+                this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+            }
+        }
+
+        function component(width, height, color, x, y) {
+            this.width = width;
+            this.height = height;
+            this.speedX = 0;
+            this.speedY = 0;
+            this.x = x;
+            this.y = y;
+            this.update = function () {
+                ctx = myGameArea.context;
+                ctx.fillStyle = color;
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            this.newPos = function () {
+                this.x += this.speedX;
+                this.y += this.speedY;
+            }
+        }
+
+        function updateGameArea() {
+            myGameArea.clear();
+            myGamePiece.newPos();
+            myGamePiece.update();
+        }
+
+        function moveup() {
+            myGamePiece.speedY -= 1;
+        }
+
+        function movedown() {
+            myGamePiece.speedY += 1;
+        }
+
+        function moveleft() {
+            myGamePiece.speedX -= 1;
+        }
+
+        function moveright() {
+            myGamePiece.speedX += 1;
+        }
+        // Add an event listener for the keydown event
+        document.addEventListener('keydown', (event) => {
+            // Check the key code of the key that was pressed
+            if (event.keyCode === 37) {
+                // Left arrow key was pressed, set the direction to left
+                moveleft()
+            } else if (event.keyCode === 38) {
+                // Up arrow key was pressed, set the direction to up
+                moveup()
+            } else if (event.keyCode === 39) {
+                // Right arrow key was pressed, set the direction to right
+                moveright()
+            } else if (event.keyCode === 40) {
+                // Down arrow key was pressed, set the direction to down
+                movedown()
+            }
+        });
+    </script>
+    <center>
+
+        <div style="text-align:center;width:480px;">
+            <button onclick="moveup()">UP</button><br><br>
+            <button onclick="moveleft()">LEFT</button>
+            <button onclick="moveright()">RIGHT</button><br><br>
+            <button onclick="movedown()">DOWN</button>
+        </div>
+    </center>
+    <style>
+        button {
+            border: 3px solid #16123f;
+            padding: 10px;
+            background-color: white;
+        }
+    </style>
+</body>
+
+</html>
