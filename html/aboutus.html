@@ -10,6 +10,7 @@
         @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@400;500;600;700&display=swap');
     </style>
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 
     <title>About us</title>
 </head>
@@ -19,7 +20,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 100vh;
+        height: 50vh;
         margin: 0;
         font-family: "poppins", sans-serif;
         background-color: #f5f5f5;
@@ -171,12 +172,31 @@
     <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
 
         <div class="draggable"></div>
-        <button
-            style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
-            onclick="resetPosition()">Rikthe logon ne qender</button>
+        <span>
+
+            <button id="button2"
+                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                onclick="resetPosition()">Show logo</button>
+            <button
+                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                onclick="resetPosition()">Rikthe logon ne qender</button>
+            <button id="button2"
+                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                onclick="resetPosition()">Hide Logo</button>
+        </span>
     </div>
 
     <script>
+
+        $(document).ready(function () {
+            $("#button1").click(function () {
+                $(".draggable").fadeOut("slow");
+            });
+            $("#button2").click(function () {
+                $(".draggable").fadeIn("slow");
+
+            });
+        });
 
         function resetPosition() {
             draggable.style.transform = "translate3d(0, 0, 0)";
