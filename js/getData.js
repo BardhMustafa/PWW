@@ -55,7 +55,7 @@ function showError() {
 const showCategories = async () => {
     try {
         const response = await fetch("https://dummyjson.com/products/categories")
-        console.log(response.json())
+        console.log(response)
     } catch (error) {
         throw new Error("failed to fetch categories");
 
