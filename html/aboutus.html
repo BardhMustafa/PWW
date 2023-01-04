@@ -93,164 +93,189 @@
             </ul>
         </nav>
     </nav>
+    <div>
 
 
-    <section>
+        <section>
 
-        <table class="Tabela">
-            <thead>
+            <table class="Tabela">
+                <thead>
+                    <tr>
+                        <td></td>
+                        <td>Balkan</td>
+                        <td>Europe</td>
+                        <td>Azia</td>
+                        <td>America</td>
+                        <td>Africa</td>
+
+                    </tr>
+                </thead>
+
                 <tr>
-                    <td></td>
-                    <td>Balkan</td>
-                    <td>Europe</td>
-                    <td>Azia</td>
-                    <td>America</td>
-                    <td>Africa</td>
+                    <td>Good Costumer service</td>
+                    <td>87%</td>
+                    <td>76%</td>
+                    <td>89%</td>
+                    <td>80%</td>
+                    <td>91%</td>
 
                 </tr>
-            </thead>
 
-            <tr>
-                <td>Good Costumer service</td>
-                <td>87%</td>
-                <td>76%</td>
-                <td>89%</td>
-                <td>80%</td>
-                <td>91%</td>
+                <thead>
+                    <tr>
+                        <td>Products returned</td>
+                        <td>5%</td>
+                        <td>4%</td>
+                        <td>14%</td>
+                        <td>19%</td>
+                        <td>20%</td>
 
-            </tr>
+                    </tr>
+                </thead>
 
-            <thead>
                 <tr>
-                    <td>Products returned</td>
-                    <td>5%</td>
-                    <td>4%</td>
-                    <td>14%</td>
+                    <td>Physical form-good condition</td>
+                    <td>100%</td>
+                    <td>100%</td>
+                    <td>87%(transport damaging)</td>
+                    <td>85%(transport damaging)</td>
+                    <td>72%(transport damaging)</td>
+
+                </tr>
+                <thead>
+                    <tr>
+                        <td>Gender</td>
+                        <td>Mostly Women</td>
+                        <td>Mostly Women</td>
+                        <td>Mostly Women</td>
+                        <td>Mostly Men</td>
+                        <td>Mostly Men</td>
+
+                    </tr>
+                </thead>
+                <tr>
+                    <td>Bad reviews</td>
+                    <td>0%</td>
+                    <td>0%</td>
+                    <td>12%</td>
+                    <td>15%</td>
                     <td>19%</td>
-                    <td>20%</td>
 
                 </tr>
-            </thead>
-
-            <tr>
-                <td>Physical form-good condition</td>
-                <td>100%</td>
-                <td>100%</td>
-                <td>87%(transport damaging)</td>
-                <td>85%(transport damaging)</td>
-                <td>72%(transport damaging)</td>
-
-            </tr>
-            <thead>
-                <tr>
-                    <td>Gender</td>
-                    <td>Mostly Women</td>
-                    <td>Mostly Women</td>
-                    <td>Mostly Women</td>
-                    <td>Mostly Men</td>
-                    <td>Mostly Men</td>
-
-                </tr>
-            </thead>
-            <tr>
-                <td>Bad reviews</td>
-                <td>0%</td>
-                <td>0%</td>
-                <td>12%</td>
-                <td>15%</td>
-                <td>19%</td>
-
-            </tr>
 
 
 
 
 
-        </table>
+            </table>
+        </section>
+        <div style="display: flex; justify-content: center;align-items: center;margin: 10px;">
+            <form>
+                <label for="rating">Please rate your experience:</label><br>
+                <input type="radio" id="rating1" name="rating" value="1"> 1<br>
+                <input type="radio" id="rating2" name="rating" value="2"> 2<br>
+                <input type="radio" id="rating3" name="rating" value="3"> 3<br>
+                <input type="radio" id="rating4" name="rating" value="4"> 4<br>
+                <input type="radio" id="rating5" name="rating" value="5"> 5<br>
+                <br>
+                <label for="suggestions">Please leave any suggestions or improvements:</label><br>
+                <textarea name="suggestions" rows="5" cols="50"></textarea>
+                <br>
+                <label for="features">Which features did you like?</label><br>
+                <input type="checkbox" id="feature1" name="features[]" value="ease of use"> Ease of use<br>
+                <input type="checkbox" id="feature2" name="features[]" value="user-friendly interface"> User-friendly
+                interface<br>
+                <input type="checkbox" id="feature3" name="features[]" value="customization options"> Customization
+                options<br>
+                <input type="checkbox" id="feature4" name="features[]" value="reliability"> Reliability<br>
+                <input type="checkbox" id="feature5" name="features[]" value="speed"> Speed<br>
+                <br>
+                <input type="submit" value="Submit"
+                    style=" border:none; padding: 15px; background-color: rgb(22, 18, 63); color: white; font-style: italic; font-weight: bolder; border-radius: 10px;">
+            </form>
+        </div>
+        <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
 
-    </section>
-    <div style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+            <div class="draggable"></div>
+            <span>
 
-        <div class="draggable"></div>
-        <span>
+                <button id="button2"
+                    style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                    onclick="resetPosition()">Show logo</button>
+                <button
+                    style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                    onclick="resetPosition()">Rikthe logon ne qender</button>
+                <button id="button2"
+                    style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
+                    onclick="resetPosition()">Hide Logo</button>
+            </span>
+        </div>
 
-            <button id="button2"
-                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
-                onclick="resetPosition()">Show logo</button>
-            <button
-                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
-                onclick="resetPosition()">Rikthe logon ne qender</button>
-            <button id="button2"
-                style="background-color: rgb(22, 18, 63); border: none; color: white;padding: 10px 20px; border-radius: 10px;"
-                onclick="resetPosition()">Hide Logo</button>
-        </span>
-    </div>
+        <script>
 
-    <script>
+            $(document).ready(function () {
+                $("#button1").click(function () {
+                    $(".draggable").slideDown("slow");
+                });
+                $("#button2").click(function () {
+                    $(".draggable").slideUp("slow");
 
-        $(document).ready(function () {
-            $("#button1").click(function () {
-                $(".draggable").fadeOut("slow");
+                });
             });
-            $("#button2").click(function () {
-                $(".draggable").fadeIn("slow");
 
-            });
-        });
-
-        function resetPosition() {
-            draggable.style.transform = "translate3d(0, 0, 0)";
-            xOffset = 0;
-            yOffset = 0;
-        }
-
-        const draggable = document.querySelector('.draggable');
-
-        let isDragging = false;
-        let currentX;
-        let currentY;
-        let initialX;
-        let initialY;
-        let xOffset = 0;
-        let yOffset = 0;
-
-        draggable.addEventListener("mousedown", dragStart);
-        draggable.addEventListener("mouseup", dragEnd);
-        draggable.addEventListener("mousemove", drag);
-
-        function dragStart(e) {
-            initialX = e.clientX - xOffset;
-            initialY = e.clientY - yOffset;
-
-            if (e.target === draggable) {
-                isDragging = true;
+            function resetPosition() {
+                draggable.style.transform = "translate3d(0, 0, 0)";
+                xOffset = 0;
+                yOffset = 0;
             }
-        }
 
-        function dragEnd(e) {
-            initialX = currentX;
-            initialY = currentY;
+            const draggable = document.querySelector('.draggable');
 
-            isDragging = false;
-        }
+            let isDragging = false;
+            let currentX;
+            let currentY;
+            let initialX;
+            let initialY;
+            let xOffset = 0;
+            let yOffset = 0;
 
-        function drag(e) {
-            if (isDragging) {
-                e.preventDefault();
-                currentX = e.clientX - initialX;
-                currentY = e.clientY - initialY;
+            draggable.addEventListener("mousedown", dragStart);
+            draggable.addEventListener("mouseup", dragEnd);
+            draggable.addEventListener("mousemove", drag);
 
-                xOffset = currentX;
-                yOffset = currentY;
+            function dragStart(e) {
+                initialX = e.clientX - xOffset;
+                initialY = e.clientY - yOffset;
 
-                setTranslate(currentX, currentY, draggable);
+                if (e.target === draggable) {
+                    isDragging = true;
+                }
             }
-        }
 
-        function setTranslate(xPos, yPos, el) {
-            el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
-        }
-    </script>
+            function dragEnd(e) {
+                initialX = currentX;
+                initialY = currentY;
+
+                isDragging = false;
+            }
+
+            function drag(e) {
+                if (isDragging) {
+                    e.preventDefault();
+                    currentX = e.clientX - initialX;
+                    currentY = e.clientY - initialY;
+
+                    xOffset = currentX;
+                    yOffset = currentY;
+
+                    setTranslate(currentX, currentY, draggable);
+                }
+            }
+
+            function setTranslate(xPos, yPos, el) {
+                el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+            }
+        </script>
 </body>
 
 </html>
